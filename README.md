@@ -5,3 +5,4 @@ C# based utility for registering ideas
 
 - C#
 - xUnit.net v3
+- Sqids
