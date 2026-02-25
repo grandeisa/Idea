@@ -10,12 +10,17 @@ public struct IdeaEntry
     public string name;
 
     public string ID;
+    public string description;
+    public DateTime latestEditDateTime;
 
-    public IdeaEntry(DateTime creationDateTime, string initialName)
+
+    public IdeaEntry(DateTime creationDateTime, string initialName, string description = "")
     {
         this.ID = GenerateID(creationDateTime, initialName);
-        this.creationDateTime = creationDateTime;
         this.name = initialName;
+        this.description = description;
+        this.creationDateTime = creationDateTime;
+        this.latestEditDateTime = creationDateTime;
     }
 
     /// <summary>
