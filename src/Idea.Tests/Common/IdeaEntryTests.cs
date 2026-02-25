@@ -60,4 +60,19 @@ public class IdeaEntryTests
         var ID2 = IdeaEntry.GenerateID(creationDateTime2, initialName2);
         Assert.NotEqual(ID1, ID2);
     }
+
+    /// <summary>
+    /// Creates a new IdeaEntry and generates an ID and
+    /// checks if the IdeaEntry's ID is equal to the generated ID
+    /// </summary>
+    /// <param name="creationDateTime"></param>
+    /// <param name="initialName"></param>
+    [Theory]
+    [MemberData(nameof(GenerateID_EqualParams_EqualID_Data))]
+    public void IdeaEntry_IDGeneratedWithParams_EqualID(DateTime creationDateTime, string initialName)
+    {
+        IdeaEntry idea = new IdeaEntry(creationDateTime, initialName);
+        var ID = IdeaEntry.GenerateID(creationDateTime, initialName);
+        Assert.Equal(idea.ID, ID);
+    }
 }
