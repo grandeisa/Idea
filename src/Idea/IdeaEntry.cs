@@ -1,6 +1,6 @@
 using Sqids;
 
-namespace Idea.Common;
+namespace Idea;
 
 public struct IdeaEntry
 { 

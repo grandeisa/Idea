@@ -1,8 +1,11 @@
 # Idea
-C# based utility for registering ideas
+C# based utility for logging ideas
 
-# Tools
+> **Note:** This project is being developed as a learning experiment.
+
+## Tools
 
 - C#
 - xUnit.net v3
 - Sqids
+- Docker Compose

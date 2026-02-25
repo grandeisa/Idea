@@ -1,6 +1,6 @@
 namespace Idea.Tests.Common;
 
-using Idea.Common;
+using Idea;
 
 public class IdeaEntryTests
 {
