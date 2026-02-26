@@ -1,0 +1,8 @@
+services:
+  tests:
+    container_name: "idea_tests"
+    image: idea_tests
+    profiles: [test]
+    build:
+      context: .
+      dockerfile: ./Docker/Tests/Dockerfile

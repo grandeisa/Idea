@@ -7,10 +7,12 @@ COPY Idea/*.csproj ./Idea/
 COPY Idea.Server/*.csproj ./Idea.Server/
 COPY Idea.Tests/*.csproj ./Idea.Tests/
 
-RUN dotnet restore Idea.Tests/Idea.Tests.csproj
+RUN dotnet restore ./Idea.Tests/Idea.Tests.csproj
+COPY . .
+WORKDIR /src/Idea.Tests
 
-RUN dotnet publish -o /build
+RUN dotnet publish ./Idea.Tests.csproj -o /build
 
 FROM base AS final
 COPY --from=build /build .
-ENTRYPOINT [ "dotnet", "test", "Idea.Tests,dll" ]
+ENTRYPOINT [ "dotnet", "test", "Idea.Tests.dll" ]
