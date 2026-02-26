@@ -9,3 +9,4 @@ C# based utility for logging ideas
 - xUnit.net v3
 - Sqids
 - Docker Compose
+- SQLite
